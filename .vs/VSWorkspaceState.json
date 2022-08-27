@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\createdoctor",
+    "\\src\\app\\home",
+    "\\src\\app\\navbar",
+    "\\src\\app\\pagenotfound",
+    "\\src\\app\\service",
+    "\\src\\app\\viewdoctor",
+    "\\src\\app\\viewpatient"
+  ],
+  "SelectedNode": "\\src\\app\\app-routing.module.ts",
+  "PreviewInSolutionExplorer": false
+}

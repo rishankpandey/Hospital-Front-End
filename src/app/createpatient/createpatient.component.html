@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+<div class="container">
+
+  <div class="card">
+
+    <form (ngSubmit)="doSubmitForm()">
+
+      <h3 align="center" style="background-color:powderblue;">Register Patient</h3>
+      <mat-form-field class="field" appearance="outline">
+        <mat-label>Id</mat-label>
+        <input [disabled]="true" type="number" [(ngModel)]="pat.id" name="id" matInput placeholder="Id">
+      </mat-form-field>
+      <mat-form-field class="field" appearance="outline">
+        <mat-label>Name</mat-label>
+        <input [(ngModel)]="pat.name" name="name" matInput placeholder="name">
+      </mat-form-field>
+      <mat-form-field class="field" appearance="fill">
+        <mat-label>Select Doctor</mat-label>
+        <mat-select [(value)]="pat.visiteddoctor">
+          <mat-option *ngFor="let doc of docget" value={{doc.id}}>
+            {{doc.name}}({{doc.speicalist}})
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="field" appearance="fill">
+        <input matInput [matDatepicker]="picker" (dateChange)="datepick($event)">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field class="field" appearance="outline">
+        <mat-label>Prescription</mat-label>
+        <input type="text" [(ngModel)]="pat.prescription" name="prescription" matInput placeholder="prescription">
+      </mat-form-field>
+      <div class="text-centre">
+        <button type="submit" mat-raised-button color="primary">Add Patient</button>
+        <button type="reset" mat-raised-button color="accent"  (click)="refresh()">Reset</button>
+      </div>
+
+    </form>
+
+  </div>
+
+</div>

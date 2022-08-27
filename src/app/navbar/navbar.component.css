@@ -1,0 +1,7 @@
+.example-icon {
+ align-items:center; 
+}
+
+.conatiner > .button:not(:last-child) {
+  margin-right: 50px;
+}

@@ -1,0 +1,49 @@
+<app-navbar></app-navbar>
+<div class="container">
+
+  <div class="card">
+
+    <form class="temp" (ngSubmit)="doSubmitForm()">
+
+      <h3 align="center" style="background-color:powderblue;">Register Doctor</h3>
+      <mat-form-field class="field" appearance="outline">
+        <mat-label>Id</mat-label>
+        <input [disabled]="true" type="number" [(ngModel)]="doct.id" name="id"  matInput placeholder="Id">
+      </mat-form-field>
+      <mat-form-field class="field" appearance="outline">
+        <mat-label>Name</mat-label>
+        <input type="text" [(ngModel)]="doct.name" name="name"  matInput placeholder="Name">
+      </mat-form-field>
+      <mat-form-field class="field" appearance="outline">
+        <mat-label>Age</mat-label>
+        <input type="text" [(ngModel)]="doct.age" name="age" matInput placeholder="Age">
+      </mat-form-field>
+      <label id="example-radio-group-label" class="field">Gender</label><br />
+      <br /><mat-radio-group aria-labelledby="example-radio-group-label"
+                             class="field"
+                             [(ngModel)]="doct.gender" [ngModelOptions]="{standalone: true}">
+        <mat-radio-button class="example-radio-button" *ngFor="let gen of genlist" [value]="gen">
+          {{gen}}
+        </mat-radio-button>
+      </mat-radio-group>
+      <br /><br />
+      <mat-form-field class="field" appearance="outline">
+        <mat-label>Specialization</mat-label>
+        <input type="text" [(ngModel)]="doct.speicalist" name="speicalist" matInput placeholder="Specialist">
+      </mat-form-field>
+      <mat-form-field class="field" appearance="outline">
+        <mat-label>Patient Attended</mat-label>
+        <input type="number" [(ngModel)]="doct.patientcount" name="patientcount" matInput placeholder="Patient Count">
+      </mat-form-field>
+
+      <div class="text-centre">
+        <button type="submit"  mat-raised-button color="primary">Add Doctor</button>
+        <button type="reset" mat-raised-button color="accent" (click)="refresh()">Reset</button>
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+

@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+<br /><br />
+<div class="text-centre">
+  <mat-form-field class="field" appearance="outline">
+    <mat-label>Id</mat-label>
+    <input type="number" [(ngModel)]="patid" name="patid" matInput placeholder="Id">
+  </mat-form-field>
+  <div class="example-button-row">
+    <button mat-raised-button color="primary" (click)="btnclick()">Show</button></div>
+  </div>
+<br /><br />
+  <div *ngIf="show == true">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th colspan="3">Id</th>
+          <th colspan="3">Name</th>
+          <th colspan="3">Visited Doctor</th>
+          <th colspan="3">Date of Visit</th>
+          <th colspan="3">Prescription</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="3"><span>{{pat.id}}</span></td>
+          <td colspan="3"><span>{{pat.name}}</span></td>
+          <td colspan="3"><span>{{pat.visiteddoctor}}</span></td>
+          <td colspan="3"><span>{{pat.dateofvisit}}</span></td>
+          <td colspan="3"><span>{{pat.prescription}}</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

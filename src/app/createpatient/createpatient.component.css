@@ -1,0 +1,26 @@
+.field {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+
+.card {
+  width: 50%;
+  margin-top: 30px;
+  margin-left: 300px;
+  background-color: whitesmoke;
+}
+
+.container {
+  margin: auto;
+  background-color:lightgray;
+}
+
+.text-centre {
+  text-align: center;
+}
+
+.card button {
+  margin: 5px;
+}
